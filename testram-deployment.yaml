@@ -20,3 +20,9 @@ spec:
           resources:
             limits:
               memory: 256Mi
+          env:
+          - name: MEGABYTES
+            valueFrom:
+              configMapKeyRef:
+                name: synergychat-testram-configmap
+                key: MEGABYTES
